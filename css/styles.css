@@ -84,13 +84,13 @@ ul { list-style: none; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 72px;
+  height: 96px;
   gap: 24px;
 }
 
 /* Logo */
 .logo { display: flex; align-items: center; gap: 12px; }
-.logo-img { height: 56px; width: auto; object-fit: contain; }
+.logo-img { height: 100px; width: auto; object-fit: contain; }
 .logo-img-footer {
   height: 64px;
   width: auto;
