@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SUEDI – Sociedad Uruguaya de Endocrinología y Diabetes Infantil</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="container">
+      <span>📧 contacto@suedi.org.uy</span>
+      <div class="topbar-social">
+        <a href="#" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="#" aria-label="Twitter/X">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="#inicio" class="logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="30" cy="30" r="28" fill="#005a9e" stroke="#003f7a" stroke-width="2"/>
+            <path d="M20 30 h20 M30 20 v20" stroke="white" stroke-width="3.5" stroke-linecap="round"/>
+            <path d="M22 22 q8-8 16 0 q8 8 0 16 q-8 8-16 0 q-8-8 0-16z" stroke="white" stroke-width="1.8" fill="none" opacity="0.5"/>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-acronym">SUEDI</span>
+          <span class="logo-full">Sociedad Uruguaya de Endocrinología<br>y Diabetes Infantil</span>
+        </div>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="mainNav">
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#quienes-somos">Institucional</a></li>
+          <li><a href="#eventos">Eventos</a></li>
+          <li><a href="#noticias">Noticias</a></li>
+          <li><a href="#recursos">Recursos</a></li>
+          <li><a href="#contacto" class="btn-nav">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="hero-bg"></div>
+    <div class="container hero-content">
+      <p class="hero-tag">Sociedad Uruguaya de Endocrinología y Diabetes Infantil</p>
+      <h1>Cuidando la salud<br>endocrina de los niños<br><span>de Uruguay</span></h1>
+      <p class="hero-desc">Promovemos la excelencia en la atención médica, la investigación científica y la formación continua de especialistas en endocrinología y diabetes pediátrica.</p>
+      <div class="hero-actions">
+        <a href="#eventos" class="btn btn-primary">Ver próximos eventos</a>
+        <a href="#quienes-somos" class="btn btn-outline">Conocenos</a>
+      </div>
+    </div>
+    <div class="hero-wave">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#f4f8fd"/></svg>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <span class="stat-number">+20</span>
+          <span class="stat-label">Años de trayectoria</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">+150</span>
+          <span class="stat-label">Socios activos</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">+40</span>
+          <span class="stat-label">Eventos realizados</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">19</span>
+          <span class="stat-label">Departamentos cubiertos</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUIÉNES SOMOS -->
+  <section class="section" id="quienes-somos">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Institucional</span>
+        <h2>Quiénes somos</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>La <strong>Sociedad Uruguaya de Endocrinología y Diabetes Infantil (SUEDI)</strong> es una institución médico-científica sin fines de lucro, fundada con el propósito de reunir a los profesionales de la salud especializados en el diagnóstico, tratamiento e investigación de las patologías endócrinas y metabólicas en la población pediátrica.</p>
+          <p>Trabajamos de manera continua para mejorar la calidad de vida de los niños y adolescentes uruguayos que padecen enfermedades como diabetes tipo 1, trastornos del crecimiento, alteraciones tiroideas y otras patologías endócrinas.</p>
+          <div class="about-values">
+            <div class="value-item">
+              <div class="value-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <div>
+                <strong>Excelencia clínica</strong>
+                <p>Fomentamos los más altos estándares en la práctica médica pediátrica.</p>
+              </div>
+            </div>
+            <div class="value-item">
+              <div class="value-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+              </div>
+              <div>
+                <strong>Formación continua</strong>
+                <p>Apoyamos la capacitación permanente de médicos y especialistas.</p>
+              </div>
+            </div>
+            <div class="value-item">
+              <div class="value-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <div>
+                <strong>Comunidad médica</strong>
+                <p>Creamos redes de colaboración entre especialistas de todo el país.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-image">
+          <div class="about-image-card">
+            <svg viewBox="0 0 200 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="200" height="220" rx="16" fill="#e8f1fc"/>
+              <circle cx="100" cy="75" r="45" fill="#c2d8f4"/>
+              <path d="M60 75 h80 M100 35 v80" stroke="#005a9e" stroke-width="6" stroke-linecap="round"/>
+              <path d="M55 140 Q100 120 145 140 L155 200 Q100 220 45 200 Z" fill="#c2d8f4"/>
+              <path d="M85 145 v35 M115 145 v35" stroke="#005a9e" stroke-width="4" stroke-linecap="round"/>
+              <circle cx="100" cy="75" r="45" stroke="#005a9e" stroke-width="3" fill="none"/>
+            </svg>
+            <div class="about-image-label">
+              <strong>SUEDI</strong>
+              <span>Comprometidos con la salud infantil</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRÓXIMOS EVENTOS (foco principal) -->
+  <section class="section section-alt" id="eventos">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Agenda</span>
+        <h2>Próximos Eventos</h2>
+        <p class="section-desc">Participá en nuestras jornadas, congresos y cursos de formación. Todos los eventos están dirigidos a profesionales de la salud especializados en endocrinología y diabetes pediátrica.</p>
+      </div>
+
+      <!-- EVENTO DESTACADO -->
+      <div class="featured-event">
+        <div class="featured-event-badge">Evento destacado</div>
+        <div class="featured-event-content">
+          <div class="featured-event-info">
+            <div class="event-date-block">
+              <span class="event-month">JUN</span>
+              <span class="event-day">14</span>
+              <span class="event-year">2025</span>
+            </div>
+            <div class="featured-event-details">
+              <span class="event-type">Congreso Nacional</span>
+              <h3>XII Congreso Uruguayo de Endocrinología y Diabetes Pediátrica</h3>
+              <p>El evento más importante del año para la especialidad en Uruguay. Contará con la presencia de expositores internacionales, talleres prácticos, presentación de casos clínicos y las últimas novedades en investigación.</p>
+              <div class="event-meta">
+                <span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Hotel Radisson Victoria Plaza, Montevideo
+                </span>
+                <span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                  8:00 – 18:00 hs
+                </span>
+                <span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                  Aforo limitado – 300 plazas
+                </span>
+              </div>
+              <a href="#contacto" class="btn btn-primary">Inscribirse ahora</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- GRILLA DE EVENTOS -->
+      <h3 class="events-subtitle">Más eventos programados</h3>
+      <div class="events-grid">
+
+        <article class="event-card">
+          <div class="event-card-header" data-color="teal">
+            <span class="event-card-type">Taller</span>
+            <div class="event-card-date">
+              <span class="event-month">MAY</span>
+              <span class="event-day">9</span>
+            </div>
+          </div>
+          <div class="event-card-body">
+            <h4>Taller: Manejo de la Diabetes Tipo 1 en Pediatría</h4>
+            <p>Actualización práctica sobre tecnología aplicada: bombas de insulina, monitoreo continuo de glucosa y nuevas insulinas.</p>
+            <ul class="event-details-list">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Hospital Pereira Rossell, Montevideo
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                9:00 – 13:00 hs
+              </li>
+            </ul>
+            <a href="#contacto" class="event-card-link">Ver detalles →</a>
+          </div>
+        </article>
+
+        <article class="event-card">
+          <div class="event-card-header" data-color="blue">
+            <span class="event-card-type">Jornada</span>
+            <div class="event-card-date">
+              <span class="event-month">MAY</span>
+              <span class="event-day">23</span>
+            </div>
+          </div>
+          <div class="event-card-body">
+            <h4>Jornada de Tiroides en Niños y Adolescentes</h4>
+            <p>Diagnóstico diferencial, manejo del hipotiroidismo congénito y actualizaciones en patología tiroidea autoinmune pediátrica.</p>
+            <ul class="event-details-list">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Modalidad híbrida (presencial + online)
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                14:00 – 18:00 hs
+              </li>
+            </ul>
+            <a href="#contacto" class="event-card-link">Ver detalles →</a>
+          </div>
+        </article>
+
+        <article class="event-card">
+          <div class="event-card-header" data-color="indigo">
+            <span class="event-card-type">Curso</span>
+            <div class="event-card-date">
+              <span class="event-month">JUL</span>
+              <span class="event-day">4</span>
+            </div>
+          </div>
+          <div class="event-card-body">
+            <h4>Curso de Obesidad y Síndrome Metabólico Pediátrico</h4>
+            <p>Abordaje multidisciplinario de la obesidad infantil, resistencia a la insulina y prevención de complicaciones metabólicas a largo plazo.</p>
+            <ul class="event-details-list">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Facultad de Medicina, UdelaR
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                8:00 – 17:00 hs
+              </li>
+            </ul>
+            <a href="#contacto" class="event-card-link">Ver detalles →</a>
+          </div>
+        </article>
+
+        <article class="event-card">
+          <div class="event-card-header" data-color="purple">
+            <span class="event-card-type">Simposio</span>
+            <div class="event-card-date">
+              <span class="event-month">AGO</span>
+              <span class="event-day">15</span>
+            </div>
+          </div>
+          <div class="event-card-body">
+            <h4>Simposio Internacional de Trastornos del Crecimiento</h4>
+            <p>Con la participación de especialistas de Argentina, Brasil y Chile. Protocolos actualizados de diagnóstico y tratamiento con hormona de crecimiento.</p>
+            <ul class="event-details-list">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Centro de Conferencias, Montevideo
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                9:00 – 17:00 hs
+              </li>
+            </ul>
+            <a href="#contacto" class="event-card-link">Ver detalles →</a>
+          </div>
+        </article>
+
+        <article class="event-card">
+          <div class="event-card-header" data-color="teal">
+            <span class="event-card-type">Webinar</span>
+            <div class="event-card-date">
+              <span class="event-month">AGO</span>
+              <span class="event-day">28</span>
+            </div>
+          </div>
+          <div class="event-card-body">
+            <h4>Webinar: Cetoacidosis Diabética – Manejo en Urgencias Pediátricas</h4>
+            <p>Casos clínicos interactivos y guías de actuación para equipos de urgencias. Gratuito para socios SUEDI.</p>
+            <ul class="event-details-list">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 10l4.553-2.07A1 1 0 0 1 21 8.847v6.306a1 1 0 0 1-1.447.917L15 14M3 8a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8z"/></svg>
+                Online – Zoom
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                18:00 – 19:30 hs
+              </li>
+            </ul>
+            <a href="#contacto" class="event-card-link">Ver detalles →</a>
+          </div>
+        </article>
+
+        <article class="event-card event-card-cta">
+          <div class="event-cta-content">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+            <h4>¿Querés proponer un evento?</h4>
+            <p>Si sos socio SUEDI podés enviar una propuesta de actividad científica para ser evaluada por la comisión directiva.</p>
+            <a href="#contacto" class="btn btn-primary">Enviar propuesta</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- NOTICIAS -->
+  <section class="section" id="noticias">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Actualidad</span>
+        <h2>Noticias</h2>
+        <p class="section-desc">Últimas novedades en endocrinología y diabetes pediátrica.</p>
+      </div>
+      <div class="news-grid">
+        <article class="news-card news-card-featured">
+          <div class="news-card-image">
+            <div class="news-placeholder news-placeholder-lg">
+              <svg viewBox="0 0 80 60" fill="none"><rect width="80" height="60" rx="4" fill="#c2d8f4"/><circle cx="28" cy="24" r="10" fill="#7ab3e0"/><path d="M0 45 Q20 35 40 45 Q60 55 80 45 L80 60 L0 60 Z" fill="#7ab3e0"/></svg>
+            </div>
+          </div>
+          <div class="news-card-body">
+            <span class="news-tag">Investigación</span>
+            <span class="news-date">18 abr 2025</span>
+            <h3>Nueva guía nacional de manejo de diabetes tipo 1 en pediatría</h3>
+            <p>SUEDI presentó la actualización de las guías clínicas nacionales, incorporando las últimas evidencias sobre tecnología de diabetes y objetivos de control glucémico en niños y adolescentes.</p>
+            <a href="#" class="news-link">Leer más →</a>
+          </div>
+        </article>
+        <div class="news-side">
+          <article class="news-small">
+            <span class="news-tag">Congreso</span>
+            <span class="news-date">10 abr 2025</span>
+            <h4>Abierta la convocatoria de resúmenes para el XII Congreso</h4>
+            <p>Plazo límite de envío: 30 de mayo de 2025. Modalidades oral y póster.</p>
+            <a href="#" class="news-link">Leer más →</a>
+          </article>
+          <article class="news-small">
+            <span class="news-tag">Formación</span>
+            <span class="news-date">2 abr 2025</span>
+            <h4>Becas de capacitación para residentes 2025</h4>
+            <p>SUEDI otorgará 5 becas para participación en el Congreso de SLEP en Buenos Aires.</p>
+            <a href="#" class="news-link">Leer más →</a>
+          </article>
+          <article class="news-small">
+            <span class="news-tag">Institucional</span>
+            <span class="news-date">20 mar 2025</span>
+            <h4>Renovación de la comisión directiva</h4>
+            <p>Se realizaron las elecciones para la nueva comisión directiva 2025–2027.</p>
+            <a href="#" class="news-link">Leer más →</a>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECURSOS -->
+  <section class="section section-alt" id="recursos">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Materiales</span>
+        <h2>Recursos para profesionales</h2>
+      </div>
+      <div class="resources-grid">
+        <a href="#" class="resource-card">
+          <div class="resource-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+          <h4>Guías Clínicas</h4>
+          <p>Protocolos y guías de práctica clínica actualizadas.</p>
+        </a>
+        <a href="#" class="resource-card">
+          <div class="resource-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          </div>
+          <h4>Publicaciones</h4>
+          <p>Artículos científicos y revisiones producidas por socios SUEDI.</p>
+        </a>
+        <a href="#" class="resource-card">
+          <div class="resource-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+          </div>
+          <h4>Webinars grabados</h4>
+          <p>Acceso a las grabaciones de actividades científicas anteriores.</p>
+        </a>
+        <a href="#" class="resource-card">
+          <div class="resource-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>
+          </div>
+          <h4>Presentaciones</h4>
+          <p>Slides y materiales de congresos y jornadas SUEDI.</p>
+        </a>
+        <a href="#" class="resource-card">
+          <div class="resource-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/></svg>
+          </div>
+          <h4>Casos clínicos</h4>
+          <p>Banco de casos clínicos con fines educativos.</p>
+        </a>
+        <a href="#socios" class="resource-card resource-card-cta">
+          <div class="resource-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg>
+          </div>
+          <h4>Hacete socio</h4>
+          <p>Accedé a todos los recursos y beneficios exclusivos para socios SUEDI.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIOS CTA -->
+  <section class="section-cta" id="socios">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Formá parte de SUEDI</h2>
+        <p>Uní a más de 150 médicos especialistas que trabajan juntos para mejorar la salud endócrina infantil en Uruguay. Como socio accedés a eventos con descuento, recursos exclusivos y la red de colegas más importante del país en la especialidad.</p>
+        <a href="#contacto" class="btn btn-white">Solicitar membresía</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="section" id="contacto">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Contacto</span>
+        <h2>Contactanos</h2>
+        <p class="section-desc">Completá el formulario y nos ponemos en contacto a la brevedad.</p>
+      </div>
+      <div class="contact-grid">
+        <form class="contact-form" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nombre">Nombre y apellido *</label>
+              <input type="text" id="nombre" name="nombre" placeholder="Dr. Juan García" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Correo electrónico *</label>
+              <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="asunto">Asunto *</label>
+            <select id="asunto" name="asunto" required>
+              <option value="">Seleccioná un asunto</option>
+              <option value="inscripcion">Inscripción a evento</option>
+              <option value="membresia">Solicitud de membresía</option>
+              <option value="propuesta">Propuesta de evento</option>
+              <option value="publicacion">Publicación / recursos</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="mensaje">Mensaje *</label>
+            <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribí tu consulta aquí..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Enviar mensaje</button>
+          <div class="form-success" id="formSuccess">
+            ¡Mensaje enviado correctamente! Te contactaremos pronto.
+          </div>
+        </form>
+        <div class="contact-info">
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <strong>Dirección</strong>
+              <p>Hospital Pereira Rossell, Bulevar Artigas 1550, Montevideo, Uruguay</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <strong>Correo electrónico</strong>
+              <p>contacto@suedi.org.uy</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.1 19.79 19.79 0 0 1 1.61 4.6C1.6 3.56 2.32 2.67 3.34 2.5h3a2 2 0 0 1 2 1.72c.127.96.36 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.08 6.08l1.77-1.77a2 2 0 0 1 2.11-.45c.907.34 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div>
+              <strong>Teléfono</strong>
+              <p>+598 2 XXX XXXX</p>
+            </div>
+          </div>
+          <div class="contact-social">
+            <p>Seguinos en redes</p>
+            <div class="social-links">
+              <a href="#" aria-label="Facebook">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              </a>
+              <a href="#" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+              </a>
+              <a href="#" aria-label="Twitter/X">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">
+            <div class="logo-icon logo-icon-sm">
+              <svg viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="28" fill="#005a9e"/><path d="M20 30 h20 M30 20 v20" stroke="white" stroke-width="3.5" stroke-linecap="round"/></svg>
+            </div>
+            <div class="logo-text">
+              <span class="logo-acronym logo-acronym-white">SUEDI</span>
+            </div>
+          </div>
+          <p>Sociedad Uruguaya de Endocrinología y Diabetes Infantil. Promoviendo la excelencia en la atención médica pediátrica desde su fundación.</p>
+        </div>
+        <div class="footer-col">
+          <h5>Institucional</h5>
+          <ul>
+            <li><a href="#quienes-somos">Quiénes somos</a></li>
+            <li><a href="#historia">Historia</a></li>
+            <li><a href="#autoridades">Autoridades</a></li>
+            <li><a href="#socios">Hacerse socio</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Actividades</h5>
+          <ul>
+            <li><a href="#eventos">Próximos eventos</a></li>
+            <li><a href="#noticias">Noticias</a></li>
+            <li><a href="#recursos">Guías clínicas</a></li>
+            <li><a href="#recursos">Webinars</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Contacto</h5>
+          <ul>
+            <li>Hospital Pereira Rossell</li>
+            <li>Bulevar Artigas 1550</li>
+            <li>Montevideo, Uruguay</li>
+            <li><a href="mailto:contacto@suedi.org.uy">contacto@suedi.org.uy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 SUEDI – Sociedad Uruguaya de Endocrinología y Diabetes Infantil. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
