@@ -1,18 +1,45 @@
+import { motion } from 'framer-motion'
+import { fadeUp, fadeIn, staggerContainer, viewportConfig } from '../animations'
+
 export default function Hero() {
   return (
     <section className="hero" id="inicio">
       <div className="hero-bg" />
       <div className="container hero-content">
-        <p className="hero-tag">Sociedad Uruguaya de Endocrinología y Diabetes Infantil</p>
-        <h1>Cuidando la salud<br />endocrina de los niños<br /><span>de Uruguay</span></h1>
-        <p className="hero-desc">
-          Promovemos la excelencia en la atención médica, la investigación científica y la
-          formación continua de especialistas en endocrinología y diabetes pediátrica.
-        </p>
-        <div className="hero-actions">
-          <a href="#eventos" className="btn btn-primary">Ver próximos eventos</a>
-          <a href="#quienes-somos" className="btn btn-outline">Conocenos</a>
-        </div>
+        <motion.div
+          variants={staggerContainer}
+          initial="hidden"
+          animate="show"
+        >
+          <motion.p className="hero-tag" variants={fadeIn}>
+            Sociedad Uruguaya de Endocrinología y Diabetes Infantil
+          </motion.p>
+          <motion.h1 variants={fadeUp}>
+            Cuidando la salud<br />endocrina de los niños<br /><span>de Uruguay</span>
+          </motion.h1>
+          <motion.p className="hero-desc" variants={fadeUp}>
+            Promovemos la excelencia en la atención médica, la investigación científica y la
+            formación continua de especialistas en endocrinología y diabetes pediátrica.
+          </motion.p>
+          <motion.div className="hero-actions" variants={fadeUp}>
+            <motion.a
+              href="#eventos"
+              className="btn btn-primary"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.97 }}
+            >
+              Ver próximos eventos
+            </motion.a>
+            <motion.a
+              href="#quienes-somos"
+              className="btn btn-outline"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.97 }}
+            >
+              Conocenos
+            </motion.a>
+          </motion.div>
+        </motion.div>
       </div>
       <div className="hero-wave">
         <svg viewBox="0 0 1440 80" preserveAspectRatio="none">

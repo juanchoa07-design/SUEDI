@@ -1,3 +1,6 @@
+import { motion } from 'framer-motion'
+import { fadeUp, slideLeft, slideRight, staggerContainer, viewportConfig } from '../animations'
+
 const values = [
   {
     icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>,
@@ -20,12 +23,25 @@ export default function About() {
   return (
     <section className="section" id="quienes-somos">
       <div className="container">
-        <div className="section-header">
+        <motion.div
+          className="section-header"
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="show"
+          viewport={viewportConfig}
+        >
           <span className="section-tag">Institucional</span>
           <h2>Quiénes somos</h2>
-        </div>
+        </motion.div>
+
         <div className="about-grid">
-          <div className="about-text">
+          <motion.div
+            className="about-text"
+            variants={slideLeft}
+            initial="hidden"
+            whileInView="show"
+            viewport={viewportConfig}
+          >
             <p>
               La <strong>Sociedad Uruguaya de Endocrinología y Diabetes Infantil (SUEDI)</strong> es
               una institución médico-científica sin fines de lucro, fundada con el propósito de reunir
@@ -37,19 +53,38 @@ export default function About() {
               uruguayos que padecen enfermedades como diabetes tipo 1, trastornos del crecimiento,
               alteraciones tiroideas y otras patologías endócrinas.
             </p>
-            <div className="about-values">
+            <motion.div
+              className="about-values"
+              variants={staggerContainer}
+              initial="hidden"
+              whileInView="show"
+              viewport={viewportConfig}
+            >
               {values.map(v => (
-                <div className="value-item" key={v.title}>
+                <motion.div
+                  className="value-item"
+                  key={v.title}
+                  variants={fadeUp}
+                  whileHover={{ x: 6 }}
+                  transition={{ type: 'spring', stiffness: 300 }}
+                >
                   <div className="value-icon">{v.icon}</div>
                   <div>
                     <strong>{v.title}</strong>
                     <p>{v.desc}</p>
                   </div>
-                </div>
+                </motion.div>
               ))}
-            </div>
-          </div>
-          <div className="about-image">
+            </motion.div>
+          </motion.div>
+
+          <motion.div
+            className="about-image"
+            variants={slideRight}
+            initial="hidden"
+            whileInView="show"
+            viewport={viewportConfig}
+          >
             <div className="about-image-card">
               <svg viewBox="0 0 200 220" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="200" height="220" rx="16" fill="#e8f1fc"/>
@@ -63,7 +98,7 @@ export default function About() {
                 <span>Comprometidos con la salud infantil</span>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import { motion } from 'framer-motion'
+import { fadeUp, slideLeft, slideRight, viewportConfig } from '../animations'
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false)
@@ -18,13 +20,27 @@ export default function Contact() {
   return (
     <section className="section" id="contacto">
       <div className="container">
-        <div className="section-header">
+        <motion.div
+          className="section-header"
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="show"
+          viewport={viewportConfig}
+        >
           <span className="section-tag">Contacto</span>
           <h2>Contactanos</h2>
           <p className="section-desc">Completá el formulario y nos ponemos en contacto a la brevedad.</p>
-        </div>
+        </motion.div>
+
         <div className="contact-grid">
-          <form className="contact-form" onSubmit={handleSubmit}>
+          <motion.form
+            className="contact-form"
+            onSubmit={handleSubmit}
+            variants={slideLeft}
+            initial="hidden"
+            whileInView="show"
+            viewport={viewportConfig}
+          >
             <div className="form-row">
               <div className="form-group">
                 <label htmlFor="nombre">Nombre y apellido *</label>
@@ -50,17 +66,33 @@ export default function Contact() {
               <label htmlFor="mensaje">Mensaje *</label>
               <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribí tu consulta aquí..." required />
             </div>
-            <button type="submit" className="btn btn-primary btn-full" disabled={loading}>
+            <motion.button
+              type="submit"
+              className="btn btn-primary btn-full"
+              disabled={loading}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
               {loading ? 'Enviando...' : 'Enviar mensaje'}
-            </button>
+            </motion.button>
             {submitted && (
-              <div className="form-success show">
+              <motion.div
+                className="form-success show"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+              >
                 ¡Mensaje enviado correctamente! Te contactaremos pronto.
-              </div>
+              </motion.div>
             )}
-          </form>
+          </motion.form>
 
-          <div className="contact-info">
+          <motion.div
+            className="contact-info"
+            variants={slideRight}
+            initial="hidden"
+            whileInView="show"
+            viewport={viewportConfig}
+          >
             <div className="contact-info-item">
               <div className="contact-info-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -91,18 +123,18 @@ export default function Contact() {
             <div className="contact-social">
               <p>Seguinos en redes</p>
               <div className="social-links">
-                <a href="#" aria-label="Facebook">
+                <motion.a href="#" aria-label="Facebook" whileHover={{ scale: 1.15 }} whileTap={{ scale: 0.95 }}>
                   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-                </a>
-                <a href="https://www.instagram.com/suediuy/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                </motion.a>
+                <motion.a href="https://www.instagram.com/suediuy/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" whileHover={{ scale: 1.15 }} whileTap={{ scale: 0.95 }}>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-                </a>
-                <a href="#" aria-label="Twitter/X">
+                </motion.a>
+                <motion.a href="#" aria-label="Twitter/X" whileHover={{ scale: 1.15 }} whileTap={{ scale: 0.95 }}>
                   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                </a>
+                </motion.a>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

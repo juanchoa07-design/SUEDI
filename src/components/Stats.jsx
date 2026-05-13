@@ -1,4 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
+import { motion } from 'framer-motion'
+import { staggerContainer, cardVariant, viewportConfig } from '../animations'
 
 const STATS = [
   { value: 20, prefix: '+', label: 'Años de trayectoria' },
@@ -35,14 +37,20 @@ export default function Stats() {
   return (
     <section className="stats">
       <div className="container">
-        <div className="stats-grid">
+        <motion.div
+          className="stats-grid"
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="show"
+          viewport={viewportConfig}
+        >
           {STATS.map(s => (
-            <div className="stat-item" key={s.label}>
+            <motion.div className="stat-item" key={s.label} variants={cardVariant}>
               <AnimatedNumber value={s.value} prefix={s.prefix} />
               <span className="stat-label">{s.label}</span>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   )
