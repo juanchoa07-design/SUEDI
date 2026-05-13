@@ -1,7 +1,9 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:www.sup.org.uy)"
+      "WebFetch(domain:www.sup.org.uy)",
+      "Bash(mkdir -p \"c:/Users/juanc/OneDrive/Documentos/GitHub/SUEDI/public\" \"c:/Users/juanc/OneDrive/Documentos/GitHub/SUEDI/src/components\")",
+      "Bash(cp \"c:/Users/juanc/OneDrive/Documentos/GitHub/SUEDI/Fotos/suedi.jpg\" \"c:/Users/juanc/OneDrive/Documentos/GitHub/SUEDI/public/suedi.jpg\")"
     ]
   }
 }
