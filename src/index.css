@@ -223,7 +223,7 @@ ul { list-style: none; }
   background: linear-gradient(135deg, var(--blue-900) 0%, var(--blue-700) 60%, var(--teal-600) 100%);
   color: var(--white);
   padding: 100px 0 120px;
-  overflow: visible;
+  overflow: hidden;
 }
 .hero-bg {
   position: absolute;
@@ -576,15 +576,13 @@ ul { list-style: none; }
 .event-cta-content .btn-primary { background: var(--white); color: var(--blue-800); border-color: var(--white); }
 .event-cta-content .btn-primary:hover { background: var(--blue-50); }
 
+.hero-mascot-wrap {
+  flex-shrink: 0;
+}
 .hero-mascot {
-  position: absolute;
-  right: 40px;
-  top: -120px;
-  width: 900px;
-  opacity: 0.12;
-  pointer-events: none;
+  width: 300px;
   filter: brightness(0) invert(1);
-  z-index: 200;
+  opacity: 0.9;
 }
 
 /* ─── NOTICIAS ─── */
