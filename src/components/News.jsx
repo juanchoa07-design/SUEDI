@@ -1,12 +1,12 @@
 import { motion } from 'framer-motion'
-import { fadeUp, slideLeft, slideRight, staggerContainer, cardVariant, viewportConfig } from '../animations'
+import { fadeUp, slideLeft, staggerContainer, cardVariant, viewportConfig } from '../animations'
 
 const base = import.meta.env.BASE_URL
 
 const newsSmall = [
-  { tag: 'Congreso', date: '10 abr 2025', title: 'Abierta la convocatoria de resúmenes para el XII Congreso', desc: 'Plazo límite de envío: 30 de mayo de 2025. Modalidades oral y póster.', img: `${base}noticias1.jpeg` },
-  { tag: 'Formación', date: '2 abr 2025', title: 'Becas de capacitación para residentes 2025', desc: 'SUEDI otorgará 5 becas para participación en el Congreso de SLEP en Buenos Aires.', img: `${base}noticias3.png` },
-  { tag: 'Institucional', date: '20 mar 2025', title: 'Renovación de la comisión directiva', desc: 'Se realizaron las elecciones para la nueva comisión directiva 2025–2027.', img: `${base}noticias4.jpeg` },
+  { title: 'CHOLEAD – Curso Internacional de Obesidad', desc: 'Curso de actualización enfocado en el abordaje integral de la obesidad, con revisión de la evidencia más reciente, estrategias terapéuticas y discusión de casos clínicos.', img: `${base}noticias1.jpeg` },
+  { title: 'ISPAD 2026', desc: 'Congreso internacional de referencia en diabetes pediátrica y del adolescente, que reúne a expertos de todo el mundo para presentar los últimos avances en investigación, tecnología y tratamiento.', img: `${base}noticias3.png` },
+  { title: '64th ESPE Annual Meeting', desc: 'El congreso europeo más importante en endocrinología pediátrica, donde se presentan los avances científicos y clínicos más relevantes, promoviendo la colaboración internacional y la excelencia en la atención de niños y adolescentes.', img: `${base}noticias4.jpeg` },
 ]
 
 export default function News() {
@@ -35,13 +35,11 @@ export default function News() {
             whileHover={{ y: -4, boxShadow: '0 16px 40px rgba(0,42,92,.12)' }}
           >
             <div className="news-card-image">
-              <img src={`${base}noticias.jpeg`} alt="Noticia destacada" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              <img src={`${base}noticias.jpeg`} alt="SLEP 2026" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
             </div>
             <div className="news-card-body">
-              <span className="news-tag">Investigación</span>
-              <span className="news-date">18 abr 2025</span>
-              <h3>Nueva guía nacional de manejo de diabetes tipo 1 en pediatría</h3>
-              <p>SUEDI presentó la actualización de las guías clínicas nacionales, incorporando las últimas evidencias sobre tecnología de diabetes y objetivos de control glucémico en niños y adolescentes.</p>
+              <h3>SLEP 2026</h3>
+              <p>El principal encuentro latinoamericano de endocrinología pediátrica, dedicado a la actualización científica, la innovación y el intercambio de experiencias entre especialistas de la región.</p>
               <a href="#" className="news-link">Leer más →</a>
             </div>
           </motion.article>
@@ -64,8 +62,6 @@ export default function News() {
                 <div className="news-small-image">
                   <img src={n.img} alt={n.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 </div>
-                <span className="news-tag">{n.tag}</span>
-                <span className="news-date">{n.date}</span>
                 <h4>{n.title}</h4>
                 <p>{n.desc}</p>
                 <a href="#" className="news-link">Leer más →</a>
