@@ -2,9 +2,9 @@ import { motion } from 'framer-motion'
 import { fadeUp, slideLeft, slideRight, staggerContainer, cardVariant, viewportConfig } from '../animations'
 
 const newsSmall = [
-  { tag: 'Congreso', date: '10 abr 2025', title: 'Abierta la convocatoria de resúmenes para el XII Congreso', desc: 'Plazo límite de envío: 30 de mayo de 2025. Modalidades oral y póster.' },
-  { tag: 'Formación', date: '2 abr 2025', title: 'Becas de capacitación para residentes 2025', desc: 'SUEDI otorgará 5 becas para participación en el Congreso de SLEP en Buenos Aires.' },
-  { tag: 'Institucional', date: '20 mar 2025', title: 'Renovación de la comisión directiva', desc: 'Se realizaron las elecciones para la nueva comisión directiva 2025–2027.' },
+  { tag: 'Congreso', date: '10 abr 2025', title: 'Abierta la convocatoria de resúmenes para el XII Congreso', desc: 'Plazo límite de envío: 30 de mayo de 2025. Modalidades oral y póster.', img: '/Noticias1.jpeg' },
+  { tag: 'Formación', date: '2 abr 2025', title: 'Becas de capacitación para residentes 2025', desc: 'SUEDI otorgará 5 becas para participación en el Congreso de SLEP en Buenos Aires.', img: '/noticas 3.png' },
+  { tag: 'Institucional', date: '20 mar 2025', title: 'Renovación de la comisión directiva', desc: 'Se realizaron las elecciones para la nueva comisión directiva 2025–2027.', img: '/noticias 4.jpeg' },
 ]
 
 export default function News() {
@@ -33,9 +33,7 @@ export default function News() {
             whileHover={{ y: -4, boxShadow: '0 16px 40px rgba(0,42,92,.12)' }}
           >
             <div className="news-card-image">
-              <div className="news-placeholder news-placeholder-lg">
-                <svg viewBox="0 0 80 60" fill="none"><rect width="80" height="60" rx="4" fill="#c2d8f4"/><circle cx="28" cy="24" r="10" fill="#7ab3e0"/><path d="M0 45 Q20 35 40 45 Q60 55 80 45 L80 60 L0 60 Z" fill="#7ab3e0"/></svg>
-              </div>
+              <img src="/noticias.jpeg" alt="Noticia destacada" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
             </div>
             <div className="news-card-body">
               <span className="news-tag">Investigación</span>
@@ -61,6 +59,9 @@ export default function News() {
                 whileHover={{ x: 6, boxShadow: '0 8px 24px rgba(0,42,92,.10)' }}
                 transition={{ type: 'spring', stiffness: 300 }}
               >
+                <div className="news-small-image">
+                  <img src={n.img} alt={n.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                </div>
                 <span className="news-tag">{n.tag}</span>
                 <span className="news-date">{n.date}</span>
                 <h4>{n.title}</h4>

@@ -621,6 +621,7 @@ ul { list-style: none; }
   border: 1px solid var(--gray-100);
   box-shadow: var(--shadow-sm);
 }
+.news-small-image { width: 100%; height: 140px; border-radius: var(--radius-sm); overflow: hidden; margin-bottom: 12px; }
 .news-small h4 { font-size: 14.5px; font-weight: 700; color: var(--gray-900); margin: 8px 0 6px; line-height: 1.4; }
 .news-small p { font-size: 13px; color: var(--gray-500); margin-bottom: 10px; }
 
