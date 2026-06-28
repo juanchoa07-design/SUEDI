@@ -9,10 +9,10 @@ const IconClock = () => (
 )
 
 const events = [
-  { color: 'teal', type: 'Taller', month: 'MAY', day: '9', title: 'Taller: Manejo de la Diabetes Tipo 1 en Pediatría', desc: 'Actualización práctica sobre tecnología aplicada: bombas de insulina, monitoreo continuo de glucosa y nuevas insulinas.', location: 'Hospital Pereira Rossell, Montevideo', time: '9:00 – 13:00 hs' },
+  { color: 'teal', type: 'Jornada', month: 'OCT', day: '2026', title: 'Pesquisa Neonatal y Patología Adrenal Infantil', desc: 'Actualización en Hiperplasia suprarrenal congénita no clásica y adrenarquia precoz.' },
 ]
 
-function EventCard({ color, type, month, day, title, desc, location, time }) {
+function EventCard({ color, type, month, day, title, desc }) {
   return (
     <motion.article
       className="event-card"
@@ -30,10 +30,6 @@ function EventCard({ color, type, month, day, title, desc, location, time }) {
       <div className="event-card-body">
         <h4>{title}</h4>
         <p>{desc}</p>
-        <ul className="event-details-list">
-          <li><IconLocation />{location}</li>
-          <li><IconClock />{time}</li>
-        </ul>
         <a href="#contacto" className="event-card-link">Ver detalles →</a>
       </div>
     </motion.article>
