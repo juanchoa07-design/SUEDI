@@ -59,13 +59,11 @@ export default function About() {
             viewport={viewportConfig}
           >
             <div className="about-image-card">
-              <svg viewBox="0 0 200 220" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="200" height="220" rx="16" fill="#e8f1fc"/>
-                <circle cx="100" cy="75" r="45" fill="#c2d8f4"/>
-                <path d="M60 75 h80 M100 35 v80" stroke="#005a9e" strokeWidth="6" strokeLinecap="round"/>
-                <path d="M55 140 Q100 120 145 140 L155 200 Q100 220 45 200 Z" fill="#c2d8f4"/>
-                <circle cx="100" cy="75" r="45" stroke="#005a9e" strokeWidth="3" fill="none"/>
-              </svg>
+              <img
+                src={`${import.meta.env.BASE_URL}carita-suedi.png`}
+                alt="Mascota SUEDI"
+                className="about-mascot"
+              />
               <div className="about-image-label">
                 <strong>SUEDI</strong>
                 <span>Comprometidos con la salud infantil</span>
