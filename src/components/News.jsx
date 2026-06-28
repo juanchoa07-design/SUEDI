@@ -1,10 +1,12 @@
 import { motion } from 'framer-motion'
 import { fadeUp, slideLeft, slideRight, staggerContainer, cardVariant, viewportConfig } from '../animations'
 
+const base = import.meta.env.BASE_URL
+
 const newsSmall = [
-  { tag: 'Congreso', date: '10 abr 2025', title: 'Abierta la convocatoria de resúmenes para el XII Congreso', desc: 'Plazo límite de envío: 30 de mayo de 2025. Modalidades oral y póster.', img: '/Noticias1.jpeg' },
-  { tag: 'Formación', date: '2 abr 2025', title: 'Becas de capacitación para residentes 2025', desc: 'SUEDI otorgará 5 becas para participación en el Congreso de SLEP en Buenos Aires.', img: '/noticas 3.png' },
-  { tag: 'Institucional', date: '20 mar 2025', title: 'Renovación de la comisión directiva', desc: 'Se realizaron las elecciones para la nueva comisión directiva 2025–2027.', img: '/noticias 4.jpeg' },
+  { tag: 'Congreso', date: '10 abr 2025', title: 'Abierta la convocatoria de resúmenes para el XII Congreso', desc: 'Plazo límite de envío: 30 de mayo de 2025. Modalidades oral y póster.', img: `${base}noticias1.jpeg` },
+  { tag: 'Formación', date: '2 abr 2025', title: 'Becas de capacitación para residentes 2025', desc: 'SUEDI otorgará 5 becas para participación en el Congreso de SLEP en Buenos Aires.', img: `${base}noticias3.png` },
+  { tag: 'Institucional', date: '20 mar 2025', title: 'Renovación de la comisión directiva', desc: 'Se realizaron las elecciones para la nueva comisión directiva 2025–2027.', img: `${base}noticias4.jpeg` },
 ]
 
 export default function News() {
@@ -33,7 +35,7 @@ export default function News() {
             whileHover={{ y: -4, boxShadow: '0 16px 40px rgba(0,42,92,.12)' }}
           >
             <div className="news-card-image">
-              <img src="/noticias.jpeg" alt="Noticia destacada" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              <img src={`${base}noticias.jpeg`} alt="Noticia destacada" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
             </div>
             <div className="news-card-body">
               <span className="news-tag">Investigación</span>
