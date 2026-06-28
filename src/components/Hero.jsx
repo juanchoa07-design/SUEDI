@@ -11,15 +11,12 @@ export default function Hero() {
           initial="hidden"
           animate="show"
         >
-          <motion.p className="hero-tag" variants={fadeIn}>
-            Sociedad Uruguaya de Endocrinología y Diabetes Infantil
-          </motion.p>
           <motion.h1 variants={fadeUp}>
-            Cuidando la salud<br />endocrina de los niños<br /><span>de Uruguay</span>
+            Sociedad Uruguaya de Endocrinología y Diabetes Infantil
           </motion.h1>
           <motion.p className="hero-desc" variants={fadeUp}>
-            Promovemos la excelencia en la atención médica, la investigación científica y la
-            formación continua de especialistas en endocrinología y diabetes pediátrica.
+            Unimos a profesionales de la salud para impulsar el conocimiento, la innovación y la
+            mejor atención en Endocrinología y Diabetología Pediátrica.
           </motion.p>
           <motion.div className="hero-actions" variants={fadeUp}>
             <motion.a
