@@ -59,11 +59,6 @@ export default function About() {
             viewport={viewportConfig}
           >
             <div className="about-image-card">
-              <img
-                src={`${import.meta.env.BASE_URL}carita-suedi.png`}
-                alt="Mascota SUEDI"
-                className="about-mascot"
-              />
               <div className="about-image-label">
                 <strong>SUEDI</strong>
                 <span>Comprometidos con la salud infantil</span>
