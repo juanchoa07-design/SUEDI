@@ -232,7 +232,14 @@ ul { list-style: none; }
 }
 .hero-content {
   position: relative;
-  max-width: 700px;
+}
+.hero-layout {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+.hero-text {
+  flex: 1;
 }
 .hero-tag {
   display: inline-block;
