@@ -223,7 +223,7 @@ ul { list-style: none; }
   background: linear-gradient(135deg, var(--blue-900) 0%, var(--blue-700) 60%, var(--teal-600) 100%);
   color: var(--white);
   padding: 100px 0 120px;
-  overflow: hidden;
+  overflow: visible;
 }
 .hero-bg {
   position: absolute;
@@ -571,12 +571,13 @@ ul { list-style: none; }
 
 .hero-mascot {
   position: absolute;
-  right: -60px;
-  bottom: 0px;
-  width: 680px;
-  opacity: 0.13;
+  right: 40px;
+  top: -120px;
+  width: 900px;
+  opacity: 0.12;
   pointer-events: none;
   filter: brightness(0) invert(1);
+  z-index: 200;
 }
 
 /* ─── NOTICIAS ─── */
