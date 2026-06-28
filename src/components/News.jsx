@@ -5,8 +5,8 @@ const base = import.meta.env.BASE_URL
 
 const newsSmall = [
   { title: 'CHOLEAD – Curso Internacional de Obesidad', desc: 'Curso de actualización enfocado en el abordaje integral de la obesidad, con revisión de la evidencia más reciente, estrategias terapéuticas y discusión de casos clínicos.', img: `${base}noticias1.jpeg` },
-  { title: 'ISPAD 2026', desc: 'Congreso internacional de referencia en diabetes pediátrica y del adolescente, que reúne a expertos de todo el mundo para presentar los últimos avances en investigación, tecnología y tratamiento.', img: `${base}noticias3.png` },
-  { title: '64th ESPE Annual Meeting', desc: 'El congreso europeo más importante en endocrinología pediátrica, donde se presentan los avances científicos y clínicos más relevantes, promoviendo la colaboración internacional y la excelencia en la atención de niños y adolescentes.', img: `${base}noticias4.jpeg` },
+  { title: 'ISPAD 2026', desc: 'Congreso internacional de referencia en diabetes pediátrica y del adolescente, que reúne a expertos de todo el mundo para presentar los últimos avances en investigación, tecnología y tratamiento.', img: `${base}noticias3.png`, link: 'https://share.google/J6pzm6K5JK8EDyNOR' },
+  { title: '64th ESPE Annual Meeting', desc: 'El congreso europeo más importante en endocrinología pediátrica, donde se presentan los avances científicos y clínicos más relevantes, promoviendo la colaboración internacional y la excelencia en la atención de niños y adolescentes.', img: `${base}noticias4.jpeg`, link: 'https://share.google/Ebm4HW5mufG1SDQuV' },
 ]
 
 export default function News() {
@@ -66,7 +66,10 @@ export default function News() {
                 </div>
                 <h4>{n.title}</h4>
                 <p>{n.desc}</p>
-                <a href="#" className="news-link">Leer más →</a>
+                {n.link
+                  ? <a href={n.link} target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ display: 'inline-block', fontSize: '12px', padding: '6px 14px' }}>Ver sitio oficial →</a>
+                  : <a href="#" className="news-link">Leer más →</a>
+                }
               </motion.article>
             ))}
           </motion.div>
