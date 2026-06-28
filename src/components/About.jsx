@@ -1,23 +1,5 @@
 import { motion } from 'framer-motion'
-import { fadeUp, slideLeft, slideRight, staggerContainer, viewportConfig } from '../animations'
-
-const values = [
-  {
-    icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>,
-    title: 'Excelencia clínica',
-    desc: 'Fomentamos los más altos estándares en la práctica médica pediátrica.',
-  },
-  {
-    icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>,
-    title: 'Formación continua',
-    desc: 'Apoyamos la capacitación permanente de médicos y especialistas.',
-  },
-  {
-    icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>,
-    title: 'Comunidad médica',
-    desc: 'Creamos redes de colaboración entre especialistas de todo el país.',
-  },
-]
+import { fadeUp, slideLeft, slideRight, viewportConfig } from '../animations'
 
 export default function About() {
   return (
@@ -53,28 +35,17 @@ export default function About() {
               y el trabajo en equipo, con el compromiso de mejorar la salud y la calidad de vida de la
               población pediátrica.
             </p>
-            <motion.div
-              className="about-values"
-              variants={staggerContainer}
-              initial="hidden"
-              whileInView="show"
-              viewport={viewportConfig}
-            >
-              {values.map(v => (
-                <motion.div
-                  className="value-item"
-                  key={v.title}
-                  variants={fadeUp}
-                  whileHover={{ x: 6 }}
-                  transition={{ type: 'spring', stiffness: 300 }}
-                >
-                  <div className="value-icon">{v.icon}</div>
-                  <div>
-                    <strong>{v.title}</strong>
-                    <p>{v.desc}</p>
-                  </div>
-                </motion.div>
-              ))}
+            <motion.div variants={fadeUp}>
+              <h3 className="about-subtitle">¿Qué es la Endocrinología y Diabetología Pediátrica?</h3>
+              <p>
+                La Endocrinología y Diabetología Pediátrica es la especialidad dedicada a la prevención,
+                diagnóstico, tratamiento y seguimiento de las enfermedades endocrinas, metabólicas y la
+                diabetes en la infancia y la adolescencia. Abarca patologías como la diabetes, los
+                trastornos del crecimiento y del desarrollo puberal, las enfermedades de la tiroides, la
+                obesidad, las alteraciones de las glándulas suprarrenales, hipófisis y gónadas, los
+                trastornos del metabolismo óseo y del calcio, entre otras, brindando una atención integral
+                basada en la mejor evidencia científica.
+              </p>
             </motion.div>
           </motion.div>
 

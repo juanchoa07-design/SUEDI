@@ -344,23 +344,13 @@ ul { list-style: none; }
   color: var(--gray-700);
   margin-bottom: 20px;
 }
-.about-values { margin-top: 32px; display: flex; flex-direction: column; gap: 20px; }
-.value-item {
-  display: flex;
-  gap: 16px;
-  align-items: flex-start;
+.about-subtitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--blue-800);
+  margin-top: 32px;
+  margin-bottom: 12px;
 }
-.value-icon {
-  width: 40px; height: 40px;
-  background: var(--blue-100);
-  border-radius: var(--radius-sm);
-  display: flex; align-items: center; justify-content: center;
-  flex-shrink: 0;
-  color: var(--blue-700);
-}
-.value-icon svg { width: 20px; height: 20px; }
-.value-item strong { display: block; color: var(--gray-900); font-size: 15px; margin-bottom: 2px; }
-.value-item p { font-size: 14px; color: var(--gray-500); margin: 0; }
 
 .about-image-card {
   background: var(--blue-50);
