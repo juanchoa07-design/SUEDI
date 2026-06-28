@@ -99,7 +99,7 @@ export default function Events() {
           </div>
         </motion.div>
 
-        <h3 className="events-subtitle">Más eventos programados</h3>
+        <h3 className="events-subtitle">Nuestros Eventos</h3>
         <motion.div
           className="events-grid"
           variants={staggerContainer}
