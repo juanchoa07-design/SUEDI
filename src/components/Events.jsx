@@ -30,7 +30,7 @@ function EventCard({ color, type, month, day, title, desc }) {
       <div className="event-card-body">
         <h4>{title}</h4>
         <p>{desc}</p>
-        <a href="#contacto" className="event-card-link">Ver detalles →</a>
+        <span className="event-card-soon">Próximamente — más detalles</span>
       </div>
     </motion.article>
   )
