@@ -44,14 +44,14 @@ export default function About() {
           >
             <p>
               La <strong>Sociedad Uruguaya de Endocrinología y Diabetes Infantil (SUEDI)</strong> es
-              una institución médico-científica sin fines de lucro, fundada con el propósito de reunir
-              a los profesionales de la salud especializados en el diagnóstico, tratamiento e
-              investigación de las patologías endócrinas y metabólicas en la población pediátrica.
+              una sociedad científica multidisciplinaria que reúne a profesionales de la salud dedicados
+              a la prevención, diagnóstico, tratamiento, investigación y educación en las enfermedades
+              endocrinas, metabólicas y la diabetes de niños y adolescentes.
             </p>
             <p>
-              Trabajamos de manera continua para mejorar la calidad de vida de los niños y adolescentes
-              uruguayos que padecen enfermedades como diabetes tipo 1, trastornos del crecimiento,
-              alteraciones tiroideas y otras patologías endócrinas.
+              Promovemos la excelencia asistencial, la formación continua, la investigación científica
+              y el trabajo en equipo, con el compromiso de mejorar la salud y la calidad de vida de la
+              población pediátrica.
             </p>
             <motion.div
               className="about-values"
