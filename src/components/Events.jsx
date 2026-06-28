@@ -55,46 +55,6 @@ export default function Events() {
           </p>
         </motion.div>
 
-        <motion.div
-          className="featured-event"
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={viewportConfig}
-          transition={{ duration: 0.7, ease: 'easeOut' }}
-        >
-          <div className="featured-event-badge">Evento destacado</div>
-          <div className="featured-event-content">
-            <div className="featured-event-info">
-              <div className="event-date-block">
-                <span className="event-month">JUN</span>
-                <span className="event-day">14</span>
-                <span className="event-year">2025</span>
-              </div>
-              <div className="featured-event-details">
-                <span className="event-type">Congreso Nacional</span>
-                <h3>XII Congreso Uruguayo de Endocrinología y Diabetes Pediátrica</h3>
-                <p>El evento más importante del año para la especialidad en Uruguay. Expositores internacionales, talleres prácticos, presentación de casos clínicos y las últimas novedades en investigación.</p>
-                <div className="event-meta">
-                  <span><IconLocation />Hotel Radisson Victoria Plaza, Montevideo</span>
-                  <span><IconClock />8:00 – 18:00 hs</span>
-                  <span>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
-                    Aforo limitado – 300 plazas
-                  </span>
-                </div>
-                <motion.a
-                  href="#contacto"
-                  className="btn btn-primary"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.97 }}
-                >
-                  Inscribirse ahora
-                </motion.a>
-              </div>
-            </div>
-          </div>
-        </motion.div>
-
         <h3 className="events-subtitle">Nuestros Eventos</h3>
         <motion.div
           className="events-grid"
