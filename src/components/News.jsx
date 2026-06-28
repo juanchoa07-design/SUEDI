@@ -40,7 +40,9 @@ export default function News() {
             <div className="news-card-body">
               <h3>SLEP 2026</h3>
               <p>El principal encuentro latinoamericano de endocrinología pediátrica, dedicado a la actualización científica, la innovación y el intercambio de experiencias entre especialistas de la región.</p>
-              <a href="#" className="news-link">Leer más →</a>
+              <a href="https://slep2026.com/" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ display: 'inline-block', fontSize: '13px', padding: '8px 18px' }}>
+                Ver sitio oficial →
+              </a>
             </div>
           </motion.article>
 

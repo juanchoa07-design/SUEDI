@@ -5,6 +5,12 @@ export default function Hero() {
   return (
     <section className="hero" id="inicio">
       <div className="hero-bg" />
+      <img
+        src={`${import.meta.env.BASE_URL}carita-suedi.png`}
+        alt=""
+        aria-hidden="true"
+        className="hero-mascot"
+      />
       <div className="container hero-content">
         <motion.div
           variants={staggerContainer}
