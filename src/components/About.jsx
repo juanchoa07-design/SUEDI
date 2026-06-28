@@ -40,11 +40,13 @@ export default function About() {
               <p>
                 La Endocrinología y Diabetología Pediátrica es la especialidad dedicada a la prevención,
                 diagnóstico, tratamiento y seguimiento de las enfermedades endocrinas, metabólicas y la
-                diabetes en la infancia y la adolescencia. Abarca patologías como la diabetes, los
-                trastornos del crecimiento y del desarrollo puberal, las enfermedades de la tiroides, la
-                obesidad, las alteraciones de las glándulas suprarrenales, hipófisis y gónadas, los
-                trastornos del metabolismo óseo y del calcio, entre otras, brindando una atención integral
-                basada en la mejor evidencia científica.
+                diabetes en la infancia y la adolescencia.
+              </p>
+              <p>
+                Abarca patologías como la diabetes, los trastornos del crecimiento y del desarrollo
+                puberal, las enfermedades de la tiroides, la obesidad, las alteraciones de las glándulas
+                suprarrenales, hipófisis y gónadas, los trastornos del metabolismo óseo y del calcio,
+                entre otras, brindando una atención integral basada en la mejor evidencia científica.
               </p>
             </motion.div>
           </motion.div>
