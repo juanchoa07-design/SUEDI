@@ -10,10 +10,6 @@ const IconClock = () => (
 
 const events = [
   { color: 'teal', type: 'Taller', month: 'MAY', day: '9', title: 'Taller: Manejo de la Diabetes Tipo 1 en Pediatría', desc: 'Actualización práctica sobre tecnología aplicada: bombas de insulina, monitoreo continuo de glucosa y nuevas insulinas.', location: 'Hospital Pereira Rossell, Montevideo', time: '9:00 – 13:00 hs' },
-  { color: 'blue', type: 'Jornada', month: 'MAY', day: '23', title: 'Jornada de Tiroides en Niños y Adolescentes', desc: 'Diagnóstico diferencial, manejo del hipotiroidismo congénito y actualizaciones en patología tiroidea autoinmune pediátrica.', location: 'Modalidad híbrida (presencial + online)', time: '14:00 – 18:00 hs' },
-  { color: 'indigo', type: 'Curso', month: 'JUL', day: '4', title: 'Curso de Obesidad y Síndrome Metabólico Pediátrico', desc: 'Abordaje multidisciplinario de la obesidad infantil, resistencia a la insulina y prevención de complicaciones metabólicas.', location: 'Facultad de Medicina, UdelaR', time: '8:00 – 17:00 hs' },
-  { color: 'purple', type: 'Simposio', month: 'AGO', day: '15', title: 'Simposio Internacional de Trastornos del Crecimiento', desc: 'Con la participación de especialistas de Argentina, Brasil y Chile. Protocolos actualizados de diagnóstico y tratamiento.', location: 'Centro de Conferencias, Montevideo', time: '9:00 – 17:00 hs' },
-  { color: 'teal', type: 'Webinar', month: 'AGO', day: '28', title: 'Webinar: Cetoacidosis Diabética – Manejo en Urgencias Pediátricas', desc: 'Casos clínicos interactivos y guías de actuación para equipos de urgencias. Gratuito para socios SUEDI.', location: 'Online – Zoom', time: '18:00 – 19:30 hs' },
 ]
 
 function EventCard({ color, type, month, day, title, desc, location, time }) {
