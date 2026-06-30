@@ -1,3 +1,4 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import TopBar from './components/TopBar'
 import Header from './components/Header'
 import Hero from './components/Hero'
@@ -8,8 +9,9 @@ import Resources from './components/Resources'
 import CTASection from './components/CTASection'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import Admin from './pages/Admin'
 
-export default function App() {
+function Home() {
   return (
     <>
       <TopBar />
@@ -23,5 +25,16 @@ export default function App() {
       <Contact />
       <Footer />
     </>
+  )
+}
+
+export default function App() {
+  return (
+    <BrowserRouter basename="/SUEDI">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/admin" element={<Admin />} />
+      </Routes>
+    </BrowserRouter>
   )
 }

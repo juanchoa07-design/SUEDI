@@ -1,15 +1,11 @@
+import { useEffect, useState } from 'react'
+import { ref, onValue } from 'firebase/database'
 import { motion } from 'framer-motion'
 import { fadeUp, staggerContainer, cardVariant, viewportConfig } from '../animations'
+import { db } from '../firebase'
 
-const IconLocation = () => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-)
-const IconClock = () => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-)
-
-const events = [
-  { color: 'teal', type: 'Jornada', month: 'OCT', day: '2026', title: 'Pesquisa Neonatal y Patología Adrenal Infantil', desc: 'Actualización en Hiperplasia suprarrenal congénita no clásica y adrenarquia precoz.' },
+const staticEvents = [
+  { id: 'pesquisa', color: 'teal', type: 'Jornada', month: 'OCT', day: '2026', title: 'Pesquisa Neonatal y Patología Adrenal Infantil', desc: 'Actualización en Hiperplasia suprarrenal congénita no clásica y adrenarquia precoz.' },
 ]
 
 function EventCard({ color, type, month, day, title, desc }) {
@@ -37,6 +33,19 @@ function EventCard({ color, type, month, day, title, desc }) {
 }
 
 export default function Events() {
+  const [dbEvents, setDbEvents] = useState([])
+
+  useEffect(() => {
+    return onValue(ref(db, 'events'), snap => {
+      if (snap.exists()) {
+        const data = Object.entries(snap.val()).map(([id, val]) => ({ id, ...val }))
+        setDbEvents(data.reverse())
+      }
+    }, () => {})
+  }, [])
+
+  const allEvents = [...dbEvents, ...staticEvents]
+
   return (
     <section className="section section-alt" id="eventos">
       <div className="container">
@@ -63,7 +72,7 @@ export default function Events() {
           whileInView="show"
           viewport={viewportConfig}
         >
-          {events.map(e => <EventCard key={e.title} {...e} />)}
+          {allEvents.map(e => <EventCard key={e.id} {...e} />)}
           <motion.article
             className="event-card event-card-cta"
             variants={cardVariant}
