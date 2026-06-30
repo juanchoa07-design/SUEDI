@@ -64,7 +64,7 @@ export default function AdminPanel({ user }) {
 
         <div className="admin-sidebar-footer">
           <button className="admin-logout" onClick={() => signOut(auth)}>
-            <IconLogout /> Cerrar sesión
+            <IconLogout /> <span>Cerrar sesión</span>
           </button>
         </div>
       </div>
