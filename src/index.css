@@ -851,6 +851,7 @@ ul { list-style: none; }
   font-weight: 500;
 }
 .form-success.show { display: block; }
+.form-error { background: #fee2e2; color: #991b1b; border-radius: var(--radius-sm); padding: 12px 16px; font-size: 14px; font-weight: 500; margin-top: 12px; }
 
 .contact-info { display: flex; flex-direction: column; gap: 28px; }
 .contact-info-item { display: flex; gap: 14px; align-items: flex-start; }

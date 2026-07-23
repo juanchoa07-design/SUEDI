@@ -2,19 +2,41 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { fadeUp, slideLeft, slideRight, viewportConfig } from '../animations'
 
+const WEB3FORMS_KEY = 'b8f41f72-bf43-485f-bb52-39c3ce80380c'
+
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false)
+  const [error, setError] = useState(false)
   const [loading, setLoading] = useState(false)
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault()
     setLoading(true)
-    setTimeout(() => {
+    setError(false)
+
+    const formData = new FormData(e.target)
+    formData.append('access_key', WEB3FORMS_KEY)
+    formData.append('subject', `Contacto SUEDI — ${formData.get('asunto')}`)
+    formData.append('from_name', 'Formulario SUEDI')
+
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData,
+      })
+      const data = await res.json()
+      if (data.success) {
+        setSubmitted(true)
+        e.target.reset()
+        setTimeout(() => setSubmitted(false), 6000)
+      } else {
+        setError(true)
+      }
+    } catch {
+      setError(true)
+    } finally {
       setLoading(false)
-      setSubmitted(true)
-      e.target.reset()
-      setTimeout(() => setSubmitted(false), 5000)
-    }, 1200)
+    }
   }
 
   return (
@@ -55,11 +77,11 @@ export default function Contact() {
               <label htmlFor="asunto">Asunto *</label>
               <select id="asunto" name="asunto" required>
                 <option value="">Seleccioná un asunto</option>
-                <option value="inscripcion">Inscripción a evento</option>
-                <option value="membresia">Solicitud de membresía</option>
-                <option value="propuesta">Propuesta de evento</option>
-                <option value="publicacion">Publicación / recursos</option>
-                <option value="otro">Otro</option>
+                <option value="Inscripción a evento">Inscripción a evento</option>
+                <option value="Solicitud de membresía">Solicitud de membresía</option>
+                <option value="Propuesta de evento">Propuesta de evento</option>
+                <option value="Publicación / recursos">Publicación / recursos</option>
+                <option value="Otro">Otro</option>
               </select>
             </div>
             <div className="form-group">
@@ -75,13 +97,23 @@ export default function Contact() {
             >
               {loading ? 'Enviando...' : 'Enviar mensaje'}
             </motion.button>
+
             {submitted && (
               <motion.div
                 className="form-success show"
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
               >
-                ¡Mensaje enviado correctamente! Te contactaremos pronto.
+                ✓ ¡Mensaje enviado! Te contactaremos a la brevedad.
+              </motion.div>
+            )}
+            {error && (
+              <motion.div
+                className="form-error"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+              >
+                Hubo un error al enviar. Intentá de nuevo o escribinos directamente a suedi.endoped.uy@gmail.com
               </motion.div>
             )}
           </motion.form>
