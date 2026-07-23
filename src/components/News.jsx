@@ -44,8 +44,6 @@ function NewsCard({ item, featured }) {
   return (
     <motion.article
       className="news-small"
-      key={item.id}
-      variants={cardVariant}
       whileHover={{ x: 6, boxShadow: '0 8px 24px rgba(0,42,92,.10)' }}
       transition={{ type: 'spring', stiffness: 300 }}
     >
@@ -97,15 +95,9 @@ export default function News() {
 
         <div className="news-grid">
           {featured && <NewsCard item={featured} featured />}
-          <motion.div
-            className="news-side"
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="show"
-            viewport={viewportConfig}
-          >
+          <div className="news-side">
             {rest.map(n => <NewsCard key={n.id} item={n} />)}
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
