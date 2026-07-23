@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { ref, onValue } from 'firebase/database'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import { fadeUp, slideLeft, viewportConfig } from '../animations'
 import { db } from '../firebase'
 
@@ -13,7 +13,57 @@ const staticNews = [
   { id: 'espe', title: '64th ESPE Annual Meeting', desc: 'El congreso europeo más importante en endocrinología pediátrica, donde se presentan los avances científicos y clínicos más relevantes, promoviendo la colaboración internacional y la excelencia en la atención de niños y adolescentes.', img: `${base}noticias4.jpeg`, link: 'https://share.google/Ebm4HW5mufG1SDQuV' },
 ]
 
-function FeaturedCard({ item }) {
+function NewsModal({ item, onClose }) {
+  // Cerrar con Escape
+  useEffect(() => {
+    const handler = e => { if (e.key === 'Escape') onClose() }
+    document.addEventListener('keydown', handler)
+    document.body.style.overflow = 'hidden'
+    return () => {
+      document.removeEventListener('keydown', handler)
+      document.body.style.overflow = ''
+    }
+  }, [onClose])
+
+  return (
+    <AnimatePresence>
+      <motion.div
+        className="news-modal-overlay"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        onClick={onClose}
+      >
+        <motion.div
+          className="news-modal"
+          initial={{ opacity: 0, scale: 0.93, y: 20 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          exit={{ opacity: 0, scale: 0.93, y: 20 }}
+          transition={{ type: 'spring', damping: 28, stiffness: 320 }}
+          onClick={e => e.stopPropagation()}
+        >
+          {item.img && (
+            <div className="news-modal-image">
+              <img src={item.img} alt={item.title} />
+            </div>
+          )}
+          <div className="news-modal-body">
+            <button className="news-modal-close" onClick={onClose} aria-label="Cerrar">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
+                <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+              </svg>
+            </button>
+            <span className="news-featured-tag" style={{ marginBottom: 12 }}>Noticia</span>
+            <h3 className="news-modal-title">{item.title}</h3>
+            <p className="news-modal-desc">{item.desc}</p>
+          </div>
+        </motion.div>
+      </motion.div>
+    </AnimatePresence>
+  )
+}
+
+function FeaturedCard({ item, onOpen }) {
   return (
     <motion.article
       className="news-featured"
@@ -32,17 +82,16 @@ function FeaturedCard({ item }) {
         <span className="news-featured-tag">Destacado</span>
         <h3>{item.title}</h3>
         <p>{item.desc}</p>
-        {item.link && (
-          <a href={item.link} target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ display: 'inline-block', fontSize: '13px', padding: '9px 20px' }}>
-            Ver sitio oficial →
-          </a>
-        )}
+        {item.link
+          ? <a href={item.link} target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ display: 'inline-block', fontSize: '13px', padding: '9px 20px' }}>Ver sitio oficial →</a>
+          : <button className="news-link" style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0 }} onClick={() => onOpen(item)}>Leer más →</button>
+        }
       </div>
     </motion.article>
   )
 }
 
-function SmallCard({ item }) {
+function SmallCard({ item, onOpen }) {
   return (
     <motion.article
       className="news-small"
@@ -58,7 +107,7 @@ function SmallCard({ item }) {
       <p>{item.desc}</p>
       {item.link
         ? <a href={item.link} target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ display: 'inline-block', fontSize: '12px', padding: '6px 14px' }}>Ver sitio oficial →</a>
-        : <a href="#" className="news-link">Leer más →</a>
+        : <button className="news-link" style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0, fontSize: '13.5px' }} onClick={() => onOpen(item)}>Leer más →</button>
       }
     </motion.article>
   )
@@ -66,6 +115,7 @@ function SmallCard({ item }) {
 
 export default function News() {
   const [dbNews, setDbNews] = useState([])
+  const [modalItem, setModalItem] = useState(null)
 
   useEffect(() => {
     return onValue(ref(db, 'news'), snap => {
@@ -96,14 +146,16 @@ export default function News() {
         </motion.div>
 
         <div className="news-layout">
-          {featured && <FeaturedCard item={featured} />}
+          {featured && <FeaturedCard item={featured} onOpen={setModalItem} />}
           {rest.length > 0 && (
             <div className="news-bottom-grid">
-              {rest.map(n => <SmallCard key={n.id} item={n} />)}
+              {rest.map(n => <SmallCard key={n.id} item={n} onOpen={setModalItem} />)}
             </div>
           )}
         </div>
       </div>
+
+      {modalItem && <NewsModal item={modalItem} onClose={() => setModalItem(null)} />}
     </section>
   )
 }
